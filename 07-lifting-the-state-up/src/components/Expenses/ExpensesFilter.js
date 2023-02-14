@@ -2,11 +2,11 @@ import React from "react";
 
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = ({ year, setYear }) => {
-
+const ExpensesFilter = ({ year, setYear, filterHandler }) => {
   const dropdownChangeHandler = (e) => {
     setYear(e.target.value);
-  }
+    filterHandler(e.target.value);
+  };
 
   return (
     <div className="expenses-filter">
